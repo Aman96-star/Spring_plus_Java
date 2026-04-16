@@ -8,3 +8,4 @@ public class Non_static_method {
     }
 }
 
+// sdskjd

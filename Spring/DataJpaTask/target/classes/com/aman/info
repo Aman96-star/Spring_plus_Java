@@ -1,0 +1,112 @@
+🔹 1. @Data (Lombok)
+@Data
+
+👉 Use:
+
+Automatically generates:
+getters
+setters
+toString()
+equals() & hashCode()
+
+👉 Without this → you must write all methods manually.
+
+⚠️ Note: You already wrote setters & toString → so @Data is partly unnecessary here.
+
+🔹 2. @Entity
+@Entity
+
+👉 Use:
+
+Marks this class as a JPA Entity (Database Table)
+
+👉 Meaning:
+
+Hibernate will treat this class as a table in DB.
+
+➡️ Without this → class is just a normal Java class ❌
+
+🔹 3. @Table(name="product")
+@Table(name="product")
+
+👉 Use:
+
+Specifies table name in database
+
+👉 If you don’t use it:
+
+Table name = class name → Product
+
+👉 Here:
+
+Table name will be → product
+🔹 4. @Id
+@Id
+private long pid;
+
+👉 Use:
+
+Marks this field as Primary Key
+
+👉 Why important?
+
+Every table must have a unique identifier
+
+➡️ Without @Id → Hibernate throws error ❌
+
+🔹 Fields (No Annotation)
+private String pname;
+private double pprice;
+
+👉 These become columns automatically in DB.
+
+👉 Column names:
+
+pname
+pprice
+🔥 Summary (Very Important)
+Annotation	Purpose
+@Entity	Makes class → DB table
+@Table	Custom table name
+@Id	Primary key
+@Data	Auto generate methods
+⚡ Why Annotations Are Powerful
+
+Without annotations ❌:
+
+You need XML configuration
+More boilerplate code
+Hard to maintain
+
+With annotations ✅:
+
+Clean code
+Less coding
+Easy to understand
+Faster development
+🚀 Real-Life Analogy
+
+Think of annotations like labels on a box 📦
+
+@Entity → "This is a database table"
+@Id → "This is unique ID"
+@Table → "Use this name in DB"
+⚠️ Important Suggestion (Best Practice)
+
+Since you're using Lombok:
+
+👉 Remove manual setters & toString OR remove @Data
+
+Better version:
+
+@Data
+@Entity
+@Table(name="product")
+public class Product {
+
+    @Id
+    private long pid;
+
+    private String pname;
+    private double pprice;
+}

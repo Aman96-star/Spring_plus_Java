@@ -29,8 +29,8 @@ public class AppConfig {
 	}
 	
 	@Bean
-	public test te() {
-		test te =new test();
+	public Test te() {
+		Test te = new Test();
 		te.setId("Stu20-21");
 		te.setModel("Ferrari");
 		te.setNum(1);
@@ -39,8 +39,8 @@ public class AppConfig {
 		return te;
 	}
 	@Bean
-	public testDi Di() {
-		return new testDi(404);
+	public TestDi Di() {
+		return new TestDi(404);
 	}
 
 }

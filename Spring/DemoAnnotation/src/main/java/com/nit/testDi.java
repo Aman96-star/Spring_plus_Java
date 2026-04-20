@@ -1,21 +1,22 @@
 package com.nit;
 
-import org.springframework.stereotype.Component;
+public class TestDi {
+    private int code;
 
-@Component
-public class testDi {
-	private int de;
-	
-	
-	public void setD(int de) {
-		super();
-		this.de = de;
-	}
+    public TestDi(int code) {
+        this.code = code;
+    }
 
+    public int getCode() {
+        return code;
+    }
 
-	@Override
-	public String toString() {
-		return "testDi [de=" + de + "]";
-	}
-	
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    @Override
+    public String toString() {
+        return "TestDi [code=" + code + "]";
+    }
 }

@@ -1,34 +1,46 @@
 package com.nit;
 
+public class Test {
+    private String id;
+    private String model;
+    private int num;
+    private TestDi testDi;
 
-// dependy injection  is applied 
+    // Getters and Setters
+    public String getId() {
+        return id;
+    }
 
-public class test {
-	private int num;
-	private String id;
-	private String model;
-	private testDi te;
-	
-	public void setId(String id) {
-		this.id = id;
-	}
-	public void setModel(String model) {
-		this.model = model;
-	}
-	
-	public void setNum(int num) {
-		this.num=num;
-	}
-	
-	
-	
-	public void setTe(testDi te) {
-		this.te = te;
-	}
-	@Override
-	public String toString() {
-		return "test [num=" + num + ", id=" + id + ", model=" + model +"injection from anotherclass"+te+ "]";
-	}
-	
-	
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public TestDi getTestDi() {
+        return testDi;
+    }
+
+    public void setTe(TestDi testDi) {
+        this.testDi = testDi;
+    }
+
+    @Override
+    public String toString() {
+        return "Test [id=" + id + ", model=" + model + ", num=" + num + ", testDi=" + testDi + "]";
+    }
 }

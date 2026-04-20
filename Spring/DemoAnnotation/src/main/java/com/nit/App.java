@@ -14,7 +14,7 @@ public class App
     	Address a = context.getBean(Address.class);
     	System.out.println(a);
     	
-    	test te =context.getBean(test.class);
+    	Test te = context.getBean(Test.class);
     	System.out.println(te);
 
     	

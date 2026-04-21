@@ -18,3 +18,51 @@ Relationship                Customer (1) → (1) CustomerProfile
 FK location                 customer_profile table holds customer_id
 Owning side                 CustomerProfile (@JoinColumn)
 Cascade                     ALL — save customer saves profile
+
+-----------------------------------------------------------------------------------------
+In JPA (Hibernate), owning side is a very important concept when you use relationships between entities like @OneToOne, @OneToMany, @ManyToMany.
+
+The owning side is the entity that:
+* controls the relationship
+* contains the foreign key in the database
+* is responsible for updating the relationship
+
+-------------------------------------------------------------------------------------------
+@Id    // @Id is used to mark a field as the primary key of a table.
+@GeneratedValue(strategy = GenerationType.IDENTITY) //It tells JPA how the primary key value should be generated automatically.
+
+-----------------------------------------------------------------------------------------
+@OneToOne
+
+👉 Defines a one-to-one relationship
+One Customer ↔ One Customer_Profile
+Each customer has exactly one profile
+
+2. mappedBy = "customer"
+👉 This is the MOST important part
+It tells:
+👉 “I am NOT the owning side”
+The owning side is inside Customer_Profile
+
+Why we use mappedBy?
+To avoid duplicate foreign keys
+To tell JPA: only one side controls relationship
+
+
+cascade = CascadeType.ALL
+👉 Means: apply all operations automatically
+Includes:
+PERSIST → save
+MERGE → update
+REMOVE → delete
+REFRESH
+DETACH
+
+Data is loaded only when needed
+private Customer_Profile profile;
+👉 This is the reference field
+Used to access profile from customer
+
+----------------------------------------------------------------------------------------------------
+
+

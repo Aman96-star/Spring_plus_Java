@@ -1,4 +1,4 @@
-﻿src/
+﻿```src/
   ├── main/java/com/[package]/*.java
   ├── main/resources/
   └── test/java/com/[package]/*Test.java
@@ -43,4 +43,4 @@ Study the projects in order:
 │
 └── exception                       ❗ (error handling)
       ├── GlobalExceptionHandler.java
-      └── ResourceNotFoundException.java
+      └── ResourceNotFoundException.java```

@@ -1,4 +1,3 @@
-package Spring_Basic;
 // instead of crating object in a class just pass or inject from outside
 // public class DI {
 //    static class Engine{
